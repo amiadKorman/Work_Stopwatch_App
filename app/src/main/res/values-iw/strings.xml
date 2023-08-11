@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">שעון עבודה</string>
+    <string name="last_lap">סבב קודם:</string>
+    <string name="fastest_lap">המהיר ביותר:</string>
+    <string name="average_lap">ממוצע:</string>
+    <string name="millis_timer">00:00.00</string>
+    <string name="elapsed_timer">00:00:00</string>
+    <string name="empty_timer">--.--:--</string>
+    <string name="empty_value">-</string>
+    <string name="lap_counter">סבב:</string>
+    <string name="remain_time">זמן לסיום:</string>
+    <string name="workers">עובדים:</string>
+    <string name="estimated_hour_money">הערכה שעתית:</string>
+    <string name="estimated_day_money">הערכה יומית:</string>
+    <string name="box">יחידות בקופסא:</string>
+    <string name="enter_number">הכנס מספר</string>
+    <string name="per_unit">ש\"ח ליחידה:</string>
+    <string name="overall_units">סה\"כ יחידות:</string>
+    <string name="current_money">תפוקה נוכחית:</string>
+    <string name="enter_minutes">הכנס דקות</string>
+    <string name="default_box_units">40</string>
+    <string name="default_unit_ils">1</string>
+    <string name="start">התחל</string>
+    <string name="pause">עצור</string>
+    <string name="reset">איפוס</string>
+    <string name="lap">הקפה</string>
+    <string name="resume">המשך</string>
+</resources>

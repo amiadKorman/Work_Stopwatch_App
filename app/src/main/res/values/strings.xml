@@ -1,0 +1,28 @@
+<resources>
+    <string name="app_name">Work Stopwatch</string>
+    <string name="last_lap">Last Lap:</string>
+    <string name="fastest_lap">Fastest:</string>
+    <string name="average_lap">Average:</string>
+    <string name="millis_timer">00:00.00</string>
+    <string name="elapsed_timer">00:00:00</string>
+    <string name="empty_timer">--:--.--</string>
+    <string name="empty_value">-</string>
+    <string name="lap_counter">Lap:</string>
+    <string name="remain_time">Remain time:</string>
+    <string name="workers">Workers:</string>
+    <string name="estimated_hour_money">Estimated hour:</string>
+    <string name="estimated_day_money">Estimated day:</string>
+    <string name="box">Box:</string>
+    <string name="enter_number">Enter number</string>
+    <string name="per_unit">Per unit:</string>
+    <string name="overall_units">Overall Units:</string>
+    <string name="current_money">Current money:</string>
+    <string name="enter_minutes">Enter minutes</string>
+    <string name="default_box_units">40</string>
+    <string name="default_unit_ils">1</string>
+    <string name="start">Start</string>
+    <string name="pause">Pause</string>
+    <string name="reset">Reset</string>
+    <string name="lap">Lap</string>
+    <string name="resume">Resume</string>
+</resources>
