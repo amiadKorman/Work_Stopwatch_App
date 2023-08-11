@@ -167,7 +167,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.5" />
+        app:layout_constraintGuide_percent="0.45" />
 
     <TextView
         android:id="@+id/tvBoxLabel"
@@ -349,7 +349,7 @@
         android:textSize="18sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/verticalGuideline"
-        app:layout_constraintTop_toBottomOf="@+id/tvEstimatedHourMoney" />
+        app:layout_constraintTop_toBottomOf="@+id/tvEstimatedHourMoney"/>
 
     <LinearLayout
         android:id="@+id/linearLayout"
@@ -364,7 +364,7 @@
         <Button
             android:id="@+id/btnStart"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="64dp"
             android:layout_margin="8dp"
             android:layout_weight="1"
             android:enabled="false"
@@ -395,7 +395,7 @@
         <Button
             android:id="@+id/btnLap"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="64dp"
             android:layout_margin="8dp"
             android:layout_weight="1"
             android:onClick="onLapClicked"
