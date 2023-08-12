@@ -1,6 +1,7 @@
 package com.example.workstopwatch
 
 import android.content.Context
+import android.graphics.Color
 import android.os.Build
 import android.os.Bundle
 import android.os.Handler
@@ -143,6 +144,8 @@ class MainActivity : AppCompatActivity() {
         etBox.addTextChangedListener(textWatcher)
         etUnit.addTextChangedListener(textWatcher)
 
+        etWorkers.setText(getString(R.string.default_unit_ils))
+        etRemainTime.setText(getString(R.string.default_box_units))
     }
 
     fun onStartClicked(view: View) {
@@ -184,8 +187,9 @@ class MainActivity : AppCompatActivity() {
             handler.removeCallbacks(updateCurrentLapTimer)
 
             // Update the elapsed time
-            elapsedTime += System.currentTimeMillis() - startTime
-            elapsedLapTime += System.currentTimeMillis() - startLapTime
+            val pauseTime = System.currentTimeMillis()
+            elapsedTime += pauseTime - startTime
+            elapsedLapTime += pauseTime - startLapTime
 
             isRunning = false
             btnStart.visibility = View.VISIBLE
@@ -220,6 +224,9 @@ class MainActivity : AppCompatActivity() {
         etBox.setText(getString(R.string.default_box_units))
         etUnit.setText(getString(R.string.default_unit_ils))
 
+        etWorkers.setText(getString(R.string.default_unit_ils))
+        etRemainTime.setText(getString(R.string.default_box_units))
+
         // Reset visibility and text of buttons
         btnStart.visibility = View.VISIBLE
         btnPause.visibility = View.GONE
@@ -234,7 +241,7 @@ class MainActivity : AppCompatActivity() {
         etUnit.isEnabled = true
 
         // Reset button color
-        btnStart.setBackgroundColor(getColor(R.color.colorPrimary))
+        btnStart.background.clearColorFilter()
 
         // Reset UI views
         tvCurrentLapTime.text = getString(R.string.millis_timer)
@@ -254,9 +261,10 @@ class MainActivity : AppCompatActivity() {
 
     fun onLapClicked(view: View) {
         if (isRunning) {
-            val lapTime = System.currentTimeMillis() - startTime + elapsedLapTime
-            val relativeLapTime = lapTime - lastLapTime
-            lastLapTime = lapTime
+            startLapTime = System.currentTimeMillis()
+
+            val relativeLapTime = startLapTime - startTime - lastLapTime + elapsedLapTime
+            lastLapTime = startLapTime - startTime
 
             updateLastLap(relativeLapTime)
             updateLapCounter()
@@ -266,7 +274,6 @@ class MainActivity : AppCompatActivity() {
             updateCurrentMoney()
             updateEstimatedMoney()
 
-            startLapTime = System.currentTimeMillis()
             elapsedLapTime = 0
 
             // Trigger vibration when the button is clicked
@@ -284,7 +291,7 @@ class MainActivity : AppCompatActivity() {
         tvLapCounter.text = "$lapCount"
     }
 
-    private fun updateAverageLap(lapTime: Long) {
+    private fun updateAverageLap(lapTime: Long) {21
         totalLapTime += lapTime
         averageLapTime = totalLapTime / lapCount
         tvAverageLap.text = formatTime(averageLapTime)
