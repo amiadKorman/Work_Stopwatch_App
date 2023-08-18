@@ -1,7 +1,7 @@
 <resources>
     <string name="app_name">Work Stopwatch</string>
     <string name="last_lap">Last Lap:</string>
-    <string name="fastest_lap">Fastest:</string>
+    <string name="fastest_lap">Fastest Lap:</string>
     <string name="average_lap">Average:</string>
     <string name="millis_timer">00:00.00</string>
     <string name="elapsed_timer">00:00:00</string>
