@@ -144,8 +144,8 @@ class MainActivity : AppCompatActivity() {
         etBox.addTextChangedListener(textWatcher)
         etUnit.addTextChangedListener(textWatcher)
 
-        etWorkers.setText(getString(R.string.default_unit_ils))
-        etRemainTime.setText(getString(R.string.default_box_units))
+//        etWorkers.setText(getString(R.string.default_unit_ils))
+//        etRemainTime.setText(getString(R.string.default_box_units))
     }
 
     fun onStartClicked(view: View) {
@@ -224,8 +224,8 @@ class MainActivity : AppCompatActivity() {
         etBox.setText(getString(R.string.default_box_units))
         etUnit.setText(getString(R.string.default_unit_ils))
 
-        etWorkers.setText(getString(R.string.default_unit_ils))
-        etRemainTime.setText(getString(R.string.default_box_units))
+//        etWorkers.setText(getString(R.string.default_unit_ils))
+//        etRemainTime.setText(getString(R.string.default_box_units))
 
         // Reset visibility and text of buttons
         btnStart.visibility = View.VISIBLE
